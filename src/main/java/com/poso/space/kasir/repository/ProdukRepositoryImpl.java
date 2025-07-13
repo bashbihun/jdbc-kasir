@@ -72,7 +72,7 @@ public class ProdukRepositoryImpl implements PordukRepository {
 
     @Override
     public Produk findById(int id) {
-        String sql = "select *from produk whwere id = ?";
+        String sql = "select *from produk where id = ?";
         try (Connection connection = DatabaseConnection.getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 
