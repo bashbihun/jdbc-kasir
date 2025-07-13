@@ -114,7 +114,7 @@ public class ProdukRepositoryImpl implements PordukRepository {
 
     @Override
     public void update(Produk produk) {
-        String sql = "update produk set nama = ?, harga = ?, stok = ?, where id ?";
+        String sql = "update produk set nama = ?, harga = ?, stok = ? where id = ?";
 
         try (Connection connection = DatabaseConnection.getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -124,6 +124,7 @@ public class ProdukRepositoryImpl implements PordukRepository {
             preparedStatement.setInt(3, produk.getStok());
             preparedStatement.setInt(4, produk.getId());
             preparedStatement.executeUpdate();
+
         } catch (SQLException e) {
             System.out.println("gagal update produk " + e.getMessage());
         }

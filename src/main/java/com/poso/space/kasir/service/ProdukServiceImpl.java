@@ -15,12 +15,12 @@ public class ProdukServiceImpl implements ProdukService {
     }
 
     @Override
-    public List<Produk> findAll() {
+    public List<Produk> tampilSemuaProduk() {
         return produkRepository.findAllProduks();
     }
 
     @Override
-    public Produk findById(int id) {
+    public Produk cariId(int id) {
         return produkRepository.findById(id);
     }
 

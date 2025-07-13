@@ -12,9 +12,9 @@ public interface ProdukService {
 
     void hapusProduk(int id);
 
-    Produk findById(int id);
+    Produk cariId(int id);
 
-    List<Produk> findAll();
+    List<Produk> tampilSemuaProduk();
 
     boolean namaSudahTerdaftar(String nama);
 }
